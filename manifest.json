@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "LogBlock",
+  "description": "Improve and track productivity",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "https://ajax.googleapis.com/",
+    "webRequest", 
+    "webRequestBlocking",
+    "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "block.html",
+    "Manager/manager.html",
+    "Manager/manager.js"
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
